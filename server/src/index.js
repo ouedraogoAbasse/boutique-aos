@@ -56,9 +56,14 @@ app.use((err, _req, res, _next) => {
 });
 
 ensureSchema()
-  .catch((e) => console.error('ensureSchema:', e.message))
-  .finally(() => {
-    app.listen(config.port, () => console.log(`✅ API AOS démarrée sur http://localhost:${config.port}`));
+  .then(() => {
+    app.listen(config.port, () => {
+      console.log(`✅ API AOS démarrée sur http://localhost:${config.port}`);
+    });
+  })
+  .catch((e) => {
+    console.error('❌ Erreur d’initialisation de la base de données :', e);
+    process.exit(1);
   });
 
 export default app;
