@@ -115,27 +115,56 @@ export async function ensureSchema() {
 
   db.exec(fs.readFileSync(schemaPath, 'utf8'));
 
-  if (!(await scalar('SELECT COUNT(*) FROM admins'))) {
-    const email = process.env.SUPER_ADMIN_EMAIL || 'admin@example.com';
-    const password = process.env.SUPER_ADMIN_PASSWORD || 'ChangezMoi123!';
+  // La création du compte doit être explicitement activée.
+  if (process.env.SUPER_ADMIN_BOOTSTRAP !== 'true') {
+    return;
+  }
 
+  const email = (process.env.SUPER_ADMIN_EMAIL || '')
+    .trim()
+    .toLowerCase();
+
+  const password = process.env.SUPER_ADMIN_PASSWORD || '';
+
+  const nom = process.env.SUPER_ADMIN_NAME || 'Abasse Ouedraogo';
+
+  if (!email || !password) {
+    throw new Error(
+      'SUPER_ADMIN_EMAIL et SUPER_ADMIN_PASSWORD doivent être configurés.'
+    );
+  }
+
+  if (password.length < 8) {
+    throw new Error('Le mot de passe du Super Administrateur doit contenir au moins 8 caractères.');
+  }
+
+  const existing = await queryOne(
+    'SELECT id FROM admins WHERE lower(email) = lower(?)',
+    [email]
+  );
+
+  const passwordHash = bcrypt.hashSync(password, 10);
+
+  if (existing) {
+    // Actualisation du compte demandé.
     await execute(
-      `INSERT INTO admins
-        (nom, email, mot_de_passe, role, boutique, commission)
-       VALUES (?, ?, ?, 'super_admin', 'AOS Multi-Service', 0)`,
-      [
-        process.env.SUPER_ADMIN_NAME || 'Administrateur',
-        email,
-        bcrypt.hashSync(password, 10),
-      ]
+      `UPDATE admins
+       SET nom = ?, email = ?, mot_de_passe = ?,
+           role = 'super_admin', actif = 1
+       WHERE id = ?`,
+      [nom, email, passwordHash, existing.id]
     );
 
-    console.log(`✅ Base initialisée — super admin créé : ${email}`);
+    console.log(`✅ Compte Super Administrateur actualisé : ${email}`);
+  } else {
+    // Création d'un nouveau Super Administrateur.
+    await execute(
+      `INSERT INTO admins
+        (nom, email, mot_de_passe, role, boutique, commission, actif)
+       VALUES (?, ?, ?, 'super_admin', 'AOS Multi-Service', 0, 1)`,
+      [nom, email, passwordHash]
+    );
 
-    if (!process.env.SUPER_ADMIN_PASSWORD) {
-      console.warn(
-        '⚠️ SUPER_ADMIN_PASSWORD non défini : mot de passe par défaut utilisé, changez-le.'
-      );
-    }
+    console.log(`✅ Super Administrateur créé : ${email}`);
   }
 }
