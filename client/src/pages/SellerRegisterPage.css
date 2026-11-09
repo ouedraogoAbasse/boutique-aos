@@ -1,0 +1,186 @@
+/* généré depuis inscription_vendeur.php — scopé sous .auth-seller */
+.auth-seller {
+& {
+            --primary-color: #1a56c4;
+            --primary-dark: #0a1f52;
+            --success-color: #10b981;
+            --orange-money: #ff6b00;
+            --moov-money: #003d7a;
+            --coris-money: #e31e24;
+        }
+& {
+            background: linear-gradient(135deg, #1a56c4 0%, #0b1638 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+.register-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 0 1rem;
+        }
+.register-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+.card-header {
+            background: linear-gradient(135deg, var(--primary-color), #0d2a6e);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+.card-header h2 {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+.card-header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.9;
+        }
+.card-body {
+            padding: 2rem;
+        }
+.form-section {
+            margin-bottom: 2rem;
+        }
+.form-section-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+.form-label {
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+.required-star {
+            color: #ef4444;
+        }
+.form-control, .form-select {
+            border: 2px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1rem;
+            transition: all 0.2s;
+        }
+.form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+.payment-input-group {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+.payment-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: white;
+            pointer-events: none;
+            z-index: 1;
+        }
+.orange-icon {
+            background: var(--orange-money);
+        }
+.moov-icon {
+            background: var(--moov-money);
+        }
+.coris-icon {
+            background: var(--coris-money);
+        }
+.payment-input {
+            padding-left: 3.5rem !important;
+        }
+.phone-prefix {
+            position: absolute;
+            left: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-weight: 600;
+            pointer-events: none;
+            font-size: 0.875rem;
+        }
+.payment-prefix-input {
+            padding-left: 7rem !important;
+        }
+.alert {
+            border-radius: 0.75rem;
+            border: none;
+            padding: 1rem;
+        }
+.btn-primary {
+            background: var(--primary-color);
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+.btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        }
+.login-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #64748b;
+        }
+.login-link a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+.login-link a:hover {
+            text-decoration: underline;
+        }
+.success-card {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+.success-icon {
+            font-size: 5rem;
+            color: var(--success-color);
+            margin-bottom: 1.5rem;
+        }
+.info-box {
+            background: #f1f5f9;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+@media (max-width: 768px) {
+  .card-body {
+                padding: 1.5rem;
+            }
+  .card-header {
+                padding: 1.5rem;
+            }
+}
+}

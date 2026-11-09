@@ -1,0 +1,108 @@
+/* généré depuis livreurs.php — scopé sous .delivery */
+.delivery {
+& { background: #f4f6fb; }
+.page-header {
+            background: linear-gradient(135deg, #0b1638 0%, #0d2a6e 55%, #1a56c4 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+.page-header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 85% 20%, rgba(212, 160, 23, 0.25), transparent 45%);
+        }
+.page-header h1 {
+            font-weight: 700;
+            position: relative;
+        }
+.page-header p {
+            opacity: 0.9;
+            position: relative;
+        }
+.info-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 14px rgba(11, 22, 56, 0.08);
+            height: 100%;
+            border-top: 4px solid #1a56c4;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+.info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(11, 22, 56, 0.12);
+        }
+.info-card .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #1a56c4, #0d2a6e);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+        }
+.info-card.gold { border-top-color: #d4a017; }
+.info-card.gold .icon {
+            background: linear-gradient(135deg, #f0c14b, #d4a017 60%, #a97e0f);
+            color: #0b1638;
+        }
+.zone-table {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(11, 22, 56, 0.08);
+        }
+.zone-table thead th {
+            background: #0b1638;
+            color: white;
+            border: none;
+            padding: 1rem;
+        }
+.zone-table td { padding: 1rem; vertical-align: middle; }
+.livreur-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 2px 8px rgba(11, 22, 56, 0.06);
+            margin-bottom: 0.75rem;
+        }
+.livreur-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a56c4, #0d2a6e);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+.cta-band {
+            background: linear-gradient(135deg, #0d2a6e, #1a56c4);
+            border-radius: 1rem;
+            padding: 2.5rem;
+            color: white;
+            text-align: center;
+            margin: 3rem 0;
+        }
+.btn-gold {
+            background: linear-gradient(135deg, #f0c14b, #d4a017 60%, #a97e0f);
+            color: #0b1638;
+            border: none;
+            font-weight: 600;
+            padding: 0.7rem 1.8rem;
+            border-radius: 0.5rem;
+        }
+.btn-gold:hover { color: #0b1638; filter: brightness(1.05); }
+}

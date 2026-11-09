@@ -1,0 +1,32 @@
+# Déploiement Render : un seul service web, base SQLite sur un disque persistant.
+services:
+  - type: web
+    name: aos-multiservice
+    runtime: node
+    plan: starter            # le disque persistant nécessite un plan payant
+    buildCommand: npm run install:all && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/home
+    disk:
+      name: aos-data
+      mountPath: /var/data   # contient aos.db (base) et uploads/ (images produits)
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: DATA_DIR
+        value: /var/data
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SUPER_ADMIN_EMAIL
+        sync: false          # à saisir dans Render lors de la création
+      - key: SUPER_ADMIN_PASSWORD
+        sync: false
+      - key: SMTP_USER
+        sync: false          # facultatif (e-mails de confirmation)
+      - key: SMTP_PASS
+        sync: false

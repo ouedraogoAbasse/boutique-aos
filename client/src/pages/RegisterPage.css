@@ -1,0 +1,227 @@
+/* généré depuis inscription.php — scopé sous .auth-register */
+.auth-register {
+& {
+            --primary-color: #1a56c4;
+            --primary-dark: #0a1f52;
+            --success-color: #10b981;
+        }
+& {
+            background: linear-gradient(135deg, #1a56c4 0%, #0b1638 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+.navbar {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+.navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+.navbar-brand:hover {
+            color: var(--primary-dark);
+        }
+.nav-link {
+            color: #64748b;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+.nav-link:hover {
+            color: var(--primary-color);
+        }
+.register-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+.register-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+        }
+.register-header {
+            background: linear-gradient(135deg, var(--primary-color), #0d2a6e);
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+.register-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+.register-header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+.register-body {
+            padding: 2.5rem 2rem;
+        }
+.form-section {
+            margin-bottom: 2rem;
+        }
+.section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+.section-title i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+.form-label {
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 0.5rem;
+        }
+.form-label .required {
+            color: #ef4444;
+        }
+.form-control {
+            border: 2px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1rem;
+            transition: all 0.2s;
+        }
+.form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+.input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            pointer-events: none;
+        }
+.input-with-icon {
+            position: relative;
+        }
+.input-with-icon .form-control {
+            padding-left: 2.75rem;
+        }
+.password-strength {
+            height: 4px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+.password-strength-bar {
+            height: 100%;
+            width: 0%;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+.strength-weak { width: 33%; background: #ef4444; }
+.strength-medium { width: 66%; background: #f59e0b; }
+.strength-strong { width: 100%; background: #10b981; }
+.btn-primary {
+            background: var(--primary-color);
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+.btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        }
+.alert {
+            border: none;
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+        }
+.alert-danger {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+.alert-success {
+            background: #dcfce7;
+            color: #166534;
+        }
+.login-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #64748b;
+        }
+.login-link a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+.login-link a:hover {
+            text-decoration: underline;
+        }
+footer {
+            background: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+@media (max-width: 768px) {
+  .register-header {
+                padding: 2rem 1.5rem;
+            }
+  .register-header h2 {
+                font-size: 1.5rem;
+            }
+  .register-body {
+                padding: 2rem 1.5rem;
+            }
+  .section-title {
+                font-size: 1.1rem;
+            }
+}
+@media (max-width: 576px) {
+  .register-card {
+                border-radius: 1rem;
+            }
+  .register-header {
+                padding: 1.5rem 1rem;
+            }
+  .register-body {
+                padding: 1.5rem 1rem;
+            }
+}
+@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+.register-card {
+            animation: fadeInUp 0.6s ease;
+        }
+.navbar .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+}

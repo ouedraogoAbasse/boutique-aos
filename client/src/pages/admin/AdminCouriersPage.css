@@ -1,0 +1,61 @@
+/* généré depuis livreurs.php — scopé sous .adm-couriers */
+.adm-couriers {
+& {
+            --primary: #0d2a6e;
+            --secondary: #1a56c4;
+            --gold: #d4a017;
+            --success: #27ae60;
+            --danger: #e74c3c;
+        }
+
+.card-form, .table-container {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+.table-container h2, .card-form h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+.table thead th {
+            border-bottom: 2px solid #dee2e6;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            padding: 1rem 0.5rem;
+        }
+.table tbody td { vertical-align: middle; padding: 0.9rem 0.5rem; }
+.livreur-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+.btn-primary {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+.btn-primary:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+.btn-gold {
+            background: linear-gradient(135deg, #f0c14b, var(--gold) 60%, #a97e0f);
+            color: #0b1638;
+            border: none;
+            font-weight: 600;
+        }
+.btn-gold:hover { color: #0b1638; filter: brightness(1.05); }
+.mobile-menu-toggle { display: none; }
+@media (max-width: 768px) {
+  .mobile-menu-toggle { display: block; }
+}
+}

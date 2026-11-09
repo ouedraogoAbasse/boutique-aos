@@ -1,0 +1,156 @@
+/* généré depuis mes-conversations.php — scopé sous .convs */
+.convs {
+& {
+            --primary-color: #1a56c4;
+            --primary-dark: #0a1f52;
+            --success-bg: #10b981;
+            --danger-bg: #ef4444;
+        }
+& {
+            background: #f8fafc;
+        }
+.page-header {
+            background: linear-gradient(135deg, var(--primary-color), #0d2a6e);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+.conversation-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-left: 4px solid transparent;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+        }
+.conversation-card:hover {
+            box-shadow: 0 8px 16px rgba(79, 70, 229, 0.15);
+            transform: translateY(-3px);
+            border-left-color: var(--primary-color);
+            background: #fafbff;
+        }
+.conversation-card.unread {
+            background: #f0f9ff;
+            border-left-color: var(--primary-color);
+            border-left-width: 5px;
+        }
+.conversation-card.unread:hover {
+            background: #e0f2fe;
+        }
+.vendor-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #0d2a6e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+.product-thumb {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            border: 2px solid #e2e8f0;
+        }
+.badge-unread {
+            background: var(--danger-bg);
+            color: white;
+            padding: 0.35rem 0.85rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.75rem;
+            animation: pulse 2s infinite;
+        }
+@keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+.time-ago {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+.last-message {
+            color: #64748b;
+            font-size: 0.875rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+.empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+.empty-state i {
+            font-size: 4rem;
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+.btn-new-message {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 6px rgba(79, 70, 229, 0.3);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            z-index: 100;
+        }
+.btn-new-message:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+            color: white;
+            box-shadow: 0 6px 12px rgba(79, 70, 229, 0.4);
+        }
+.chevron-icon {
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            transition: all 0.3s;
+        }
+.conversation-card:hover .chevron-icon {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+.conversation-link {
+            text-decoration: none;
+            color: inherit;
+        }
+@media (max-width: 768px) {
+  .page-header {
+                padding: 2rem 0;
+            }
+  .vendor-avatar {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+  .btn-new-message {
+                bottom: 1rem;
+                right: 1rem;
+            }
+}
+}

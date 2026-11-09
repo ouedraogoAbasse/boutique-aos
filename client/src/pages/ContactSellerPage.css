@@ -1,0 +1,82 @@
+/* généré depuis contacter-vendeur.php — scopé sous .contact */
+.contact {
+& {
+            --primary-color: #1a56c4;
+            --primary-dark: #0a1f52;
+        }
+& {
+            background: #f8fafc;
+        }
+.page-header {
+            background: linear-gradient(135deg, var(--primary-color), #0d2a6e);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+.contact-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+.product-preview {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+.product-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            border: 2px solid #e2e8f0;
+        }
+.vendor-info {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+.vendor-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), #0d2a6e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+.form-label {
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 0.5rem;
+        }
+.form-control, .form-select {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+        }
+.form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+.btn-primary {
+            background: var(--primary-color);
+            border: none;
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+        }
+.btn-primary:hover {
+            background: var(--primary-dark);
+        }
+.alert {
+            border: none;
+            border-radius: 0.75rem;
+        }
+}

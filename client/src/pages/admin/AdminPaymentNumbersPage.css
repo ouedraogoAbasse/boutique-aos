@@ -1,0 +1,159 @@
+/* généré depuis mes_numeros_paiement.php — scopé sous .adm-paynum */
+.adm-paynum {
+& {
+            --primary-color: #1a56c4;
+            --primary-dark: #0a1f52;
+            --success-color: #10b981;
+            --orange-money: #ff6b00;
+            --moov-money: #003d7a;
+            --coris-money: #e31e24;
+        }
+& {
+            background: #f8fafc;
+        }
+.container-main {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+.card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+.card-header {
+            background: linear-gradient(135deg, var(--primary-color), #0d2a6e);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem 1rem 0 0 !important;
+        }
+.card-header h2 {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+.card-header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.9;
+        }
+.card-body {
+            padding: 2rem;
+        }
+.info-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+        }
+.warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+        }
+.payment-input-group {
+            margin-bottom: 1.5rem;
+        }
+.form-label {
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+.payment-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+.payment-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+        }
+.payment-card.has-number {
+            background: #f0fdf4;
+            border-color: var(--success-color);
+        }
+.payment-icon-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 0.875rem;
+        }
+.orange-badge {
+            background: var(--orange-money);
+        }
+.moov-badge {
+            background: var(--moov-money);
+        }
+.coris-badge {
+            background: var(--coris-money);
+        }
+.form-control {
+            border: 2px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 0.875rem 1rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+.form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+.phone-prefix-display {
+            color: #64748b;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-right: 0.5rem;
+        }
+.current-number {
+            margin-top: 0.5rem;
+            padding: 0.75rem;
+            background: #f8fafc;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+.current-number-value {
+            font-weight: 700;
+            color: var(--success-color);
+            font-size: 1.125rem;
+        }
+.btn-primary {
+            background: var(--primary-color);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+.btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+        }
+.alert {
+            border-radius: 0.75rem;
+            border: none;
+            padding: 1rem;
+        }
+}

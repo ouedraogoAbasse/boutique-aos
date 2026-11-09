@@ -1,0 +1,3 @@
+/* Styles globaux de l'application React (complète legacy-style.css repris du projet PHP). */
+body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; background: #f4f6fb; color: #33415e; }
+a { text-decoration: none; }

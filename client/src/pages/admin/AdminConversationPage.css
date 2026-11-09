@@ -1,0 +1,172 @@
+/* généré depuis conversation-detail.php — scopé sous .adm-conv */
+.adm-conv {
+& {
+            --primary-color: #1a56c4;
+            --primary-dark: #0a1f52;
+            --success-bg: #10b981;
+            --client-bg: #10b981;
+            --admin-bg: #1a56c4;
+        }
+& {
+            background: #f8fafc;
+            height: 100vh;
+            overflow: hidden;
+        }
+.chat-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+.chat-header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+.client-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--client-bg), #059669);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+.client-info {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+.product-info {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+.product-thumb {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+.chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
+            background: #f8fafc;
+        }
+.message {
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+.message.client {
+            flex-direction: row;
+        }
+.message.vendeur {
+            flex-direction: row-reverse;
+        }
+.message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+.message.client .message-avatar {
+            background: linear-gradient(135deg, var(--client-bg), #059669);
+        }
+.message.vendeur .message-avatar {
+            background: linear-gradient(135deg, var(--admin-bg), #0d2a6e);
+        }
+.message-content {
+            max-width: 60%;
+        }
+.message-bubble {
+            padding: 1rem 1.25rem;
+            border-radius: 1rem;
+            position: relative;
+        }
+.message.client .message-bubble {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-bottom-left-radius: 0.25rem;
+        }
+.message.vendeur .message-bubble {
+            background: var(--admin-bg);
+            color: white;
+            border-bottom-right-radius: 0.25rem;
+        }
+.message-time {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+        }
+.message.vendeur .message-time {
+            text-align: right;
+        }
+.chat-input {
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 1.5rem;
+        }
+.quick-replies {
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            padding: 1rem 1.5rem;
+        }
+.quick-reply-btn {
+            font-size: 0.875rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+.form-control {
+            border: 1px solid #e2e8f0;
+            padding: 1rem 1.5rem;
+            border-radius: 2rem;
+        }
+.form-control:focus {
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+            border-color: var(--primary-color);
+        }
+.btn-send {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            transition: all 0.3s;
+        }
+.btn-send:hover {
+            background: var(--primary-dark);
+        }
+.date-divider {
+            text-align: center;
+            margin: 2rem 0;
+        }
+.date-divider span {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+@media (max-width: 768px) {
+  .message-content {
+                max-width: 80%;
+            }
+}
+}

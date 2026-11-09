@@ -1,0 +1,31 @@
+/* généré depuis notifications.php — scopé sous .admin-notifs */
+.admin-notifs {
+& {
+            background: #f8f9fa;
+        }
+.notification-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            border-left: 4px solid #dee2e6;
+        }
+.notification-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+.notification-card.unread {
+            background: #e7f3ff;
+            border-left-color: #0d6efd;
+        }
+.notification-card.high {
+            border-left-color: #dc3545;
+        }
+.notification-card.medium {
+            border-left-color: #0d6efd;
+        }
+.notification-card.low {
+            border-left-color: #6c757d;
+        }
+}
